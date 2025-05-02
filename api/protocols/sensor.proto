@@ -1,0 +1,16 @@
+syntax = "proto3";
+package sensor;
+
+// Une lecture de capteur
+message SensorReading {
+  string  sensorId    = 1;
+  int64   timestamp   = 2;   // epoch ms
+  double  temperature = 3;
+  double  humidity    = 4;
+  double  pressure    = 5;
+}
+
+// Un lot de lectures
+message SensorBatch {
+  repeated SensorReading readings = 1;
+}
