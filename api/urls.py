@@ -1,10 +1,8 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import ArticleViewSet
+from django.urls import path
+from api.views import *
 
-router = DefaultRouter()
-router.register(r'articles', ArticleViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('sensors/batch/', SensorBatchView.as_view(), name='sensor-batch'),
+    path('sensors/json/', SensorJsonView.as_view(), name='sensor-json'),
 ]
