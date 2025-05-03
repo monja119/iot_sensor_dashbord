@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// Commentaire sur une ligne
+
+/*
+  Commentaire
+  multi-lignes
+*/
+
